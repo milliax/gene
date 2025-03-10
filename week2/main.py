@@ -1,13 +1,15 @@
-import random
+dept = ['工工系', '運管系', '管科系', '資財系', '資管所', 
+'科管所', '經管所', 'GMBA', 'EMBA']
 
-def random10int():
-    return [random.randint(0, 50) for _ in range(10)]
+new_dept = []
 
-def squareSum(params: list):
-    return sum([x**2 for x in params])
+for e in dept:
+    if(e.endswith("系")):
+        new_dept.append(f"{e}(所)")
+    elif(e.endswith("MBA")):
+        new_dept.append(f"{e}學程")
+    else:
+        new_dept.append(e)
 
-
-randomInts = random10int()
-
-print(randomInts)
-print(squareSum(randomInts))
+for i in range(len(new_dept)):
+    print(f"{i}: {new_dept[i]}")
