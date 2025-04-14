@@ -152,8 +152,10 @@ for i in range(NUM_ITERATION):
 # 畫圖
 import matplotlib.pyplot
 
-matplotlib.pyplot.plot(best_outputs)
-matplotlib.pyplot.plot(mean_outputs)
+matplotlib.pyplot.plot(best_outputs, label="Best")
+matplotlib.pyplot.plot(mean_outputs, label="Mean")
 matplotlib.pyplot.xlabel("Iteration")
 matplotlib.pyplot.ylabel("Fitness")
+# matplotlib.pyplot.title("TSP with Uniform Crossover")
+matplotlib.pyplot.legend()
 matplotlib.pyplot.show()
