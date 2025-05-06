@@ -45,11 +45,11 @@ print(mOrder)
 
 NUM_ITERATION = 2000			# 世代數(迴圈數)
 
-NUM_CHROME = 100				# 染色體個數
+NUM_CHROME = 180				# 染色體個數
 NUM_BIT = NUM_JOB * NUM_MACHINE		   # 染色體長度 # === Step 3-1. 編碼是 000111222 的排列 ===
 
-Pc = 0.85    					# 交配率 (代表共執行Pc*NUM_CHROME/2次交配)
-Pm = 0.03   					# 突變率 (代表共要執行Pm*NUM_CHROME*NUM_BIT次突變)
+Pc = 0.8    					# 交配率 (代表共執行Pc*NUM_CHROME/2次交配)
+Pm = 0.0007   					# 突變率 (代表共要執行Pm*NUM_CHROME*NUM_BIT次突變)
 
 NUM_PARENT = NUM_CHROME                         # 父母的個數
 NUM_CROSSOVER = int(Pc * NUM_CHROME / 2)        # 交配的次數
